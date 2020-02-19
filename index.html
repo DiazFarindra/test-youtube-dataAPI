@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Client ID Meta Info -->
+    <meta name="google-signin-client_id" content="5351956383-d7j3ounhb0jsq71p0rgn319pidl9rl4a.apps.googleusercontent.com">
+
+    <!-- Youtube Icon -->
+    <link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico" type="image/x-icon">
+    <link rel="icon" href="https://s.ytimg.com/yts/img/favicon_32-vflOogEID.png" sizes="32x32">
+    <link rel="icon" href="https://s.ytimg.com/yts/img/favicon_48-vflVjB_Qk.png" sizes="48x48">
+    <link rel="icon" href="https://s.ytimg.com/yts/img/favicon_96-vflW9Ec0w.png" sizes="96x96">
+    <link rel="icon" href="https://s.ytimg.com/yts/img/favicon_144-vfliLAfaB.png" sizes="144x144">
+    
+
+    <!-- Kit's code fontawesome -->
+    <script src="https://kit.fontawesome.com/f654b0bdad.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <title>Youtube Data API v3</title>
+
+    <style>
+        .yeah {
+            display: inline-block;
+        }
+        .button {
+            border: none; 
+            background: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Yotube Data API v3</h1>
+
+    <!-- <div class="g-signin2" onclick="authenticate().then(loadClient)"></div> -->
+    <button class="g-signin2 yeah button" onclick="authenticate().then(execute)"></button>
+    <button class="yeah" onclick="signOut()">logout</button>
+    <button class="yeah" onclick="execute1()">execute1</button>
+    <button class="yeah" onclick="execute2()">execute2</button>
+
+    <div class="container-fluid mt-5 ml-5" id="container">
+        
+        <!-- TITLE CONTAINER -->
+
+        <div class="card mb-3" style="max-width: 540px;">
+
+            <div class="row no-gutters">
+
+                <div class="col-md-5">
+
+                    <iframe width="100%" height="100%" class="card-img" src="https://www.youtube.com/embed/neV3EPgvZ3g" 
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+
+                </div>
+
+                <div class="col-md-7">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                            content. This content is a little bit longer.</p>
+                            
+                            <button class="btn btn-link btn-sm ml-n2" type="button" data-toggle="collapse" data-target="#viewComment"
+                                aria-expanded="false" aria-controls="viewComment">
+                                view comment
+                            </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Collapse Comment -->
+            <div class="collapse" id="viewComment">
+                <div class="card-body" style="height: 200px; overflow: hidden;" id="parent">
+
+                    <!-- Comment Content -->
+                    <div class="container" id="child">
+                        <div class="row">
+
+                            <div class="col-sm-2">
+                                <img class="img-thumbnail rounded-circle img-fluid" style="width: 50px;"
+                                    src="https://image.flaticon.com/icons/svg/1738/1738760.svg" alt="yeah">
+                            </div>
+
+                            <div class="col-sm-10 ml-n3">
+
+                                <small class="text-muted">
+                                    Diaz Farindra
+                                </small>
+
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, ut.</p>
+
+                                <!-- Reply Button -->
+                                <button class="btn btn-link btn-sm mt-n4 ml-n2" type="button" data-toggle="collapse" data-target="#reply"
+                                    aria-expanded="false" aria-controls="reply">
+                                    reply
+                                </button>
+
+                                <!-- Reply Form -->
+                                <div class="" id="reply">
+                                    <div class="mt-n3">
+
+                                        <div class="row">
+
+                                            <div class="col-sm-2 mt-4">
+                                                <img class="img-thumbnail rounded-circle img-fluid" style="width: 50px;"
+                                                    src="https://image.flaticon.com/icons/svg/1738/1738760.svg" alt="yeah">
+                                            </div>
+                                            
+                                            <form class="col-sm-10 ml-n3" action="">
+                                                <div class="form-group">
+                                                    <label for="reply"></label>
+                                                    <input type="text" class="form-control" id="reply" name="reply" placeholder="add a public reply...">
+                                                </div>
+                                                <button type="submit" class="btn btn-outline-dark btn-sm float-right">Submit</button>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+    <!-- Javascript Source CDN -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Javascript Custom Handler -->
+    <script src="./js/auth.js"></script>
+    <script src="./js/logout.js"></script>
+</body>
+
+</html>
